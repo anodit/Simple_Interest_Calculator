@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Interest Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script type="text/javascript">
+        function calculate() {
+            var p = 0;
+            var n = 0;
+            var r = 0;
+            var SI = 0;
+            p = parseInt(document.getElementById("principal").value);
+            n = parseInt(document.getElementById("years").value);
+            r = parseInt(document.getElementById("rate").value);
+
+            SI = (p * n * r) / 100;
+            document.getElementById("res").innerHTML = "Simple Interest : " + SI;
+        }
+    </script>
+</head>
+
+<body style="background-color: gray;">
+    <div class="container" style="background-color: darkgray; margin-top: 80px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="text-align: center; color:darkolivegreen; padding: 10px;">Simple Interest Calculator</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group">
+                        <label class="form-group">Principal</label>
+                        <input class="form-control" type="text" id="principal" placeholder="Enter the Principal amount">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group">Years</label>
+                        <input class="form-control" type="text" id="years" placeholder="Enter the no. of years">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-group">Rate Of Interest</label>
+                        <input class="form-control" type="text" id="rate" placeholder="Enter the rate of interest">
+                    </div>
+                    <button class="btn btn-dark" type="button" onClick="calculate()">Calculate</button>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-12">
+                <h1 id="res">$</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
